@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завтрак</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"> <!-- Подключаем CSS файл -->
+    <!-- <link rel="stylesheet" href="styles.css">  Подключаем CSS файл -->
+</head>
+<body>
+    <div class="wood-frame">
+        <video autoplay loop muted class="bgvideo" id="bgvideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <img src="logo.png" alt="Логотип" class=" logo">
+        <div class="content">
+            <button id='1' class="button" onclick="changeText(mainText, 'Главная')">Главная</button>
+            <button id='2' class="button" onclick="changeText(breakfastText, 'Завтрак')">Завтрак</button>
+            <button id='3' class="button" onclick="changeText(lunchText, 'Обед')">Обед</button>
+            <a href="poln_ru.html" class="button">Полное меню</a>
+        </div>
+        <div class="kontent">
+            <h1 class="school-title" id="title"> Школа 583</h1>
+            <div id='content'>
+                <p>У нас:</p>
+                <p>- Профессиональные повара</p>
+                <p>- Доброжелательный персонал</p>
+                <p>- Качественные и свежие продукты</p>
+            </div>
+        </div>
+        <div id="podval">
+            <h1>@ COPINING 2024-2025 | SCHOOL №583 </h1>
+        </div>
+    </div>
+    <script>
+        // Запретить контекстное меню на видео
+        document.getElementById('bgvideo').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Запретить контекстное меню на всей странице
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        const mainText = `У нас:<br>
+                          - Профессиональные повара<br>
+                          - Доброжелательный персонал<br>
+                          - Качественные и свежие продукты`;
+        const breakfastText = `Наши предложения: <br>
+                               - Овсянка с фруктами<br>        
+                               - Яичница с овощами<br>
+                               - Тосты с авокадо<br>
+                               - Свежевыжатый сок<br>
+                               - Чай и кофе`;
+        const lunchText = `Наши предложения: <br>
+                          - Куриный суп с лапшой<br>
+                          - Паста с соусом болоньезе<br>
+                          - Салат Цезарь<br>
+                          - Рыба на гриле с овощами<br>
+                          - Десерт: Тирамису`;
+
+        function changeText(newText, title) {
+            document. getElementById('content').innerHTML = newText; // Изменение текста для id content
+            document.getElementById('title').innerHTML = title; // Изменение заголовка
+        }
+    </script>
+</body>
+</html>

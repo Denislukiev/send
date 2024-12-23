@@ -1,0 +1,203 @@
+body {
+    background: url('video.png') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+    filter: blur(1px);
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    top: 35px;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+#podval {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(204, 204, 204, 0.7); /* Темный фон для лучшей читаемости */
+    font-family: 'Dancing Script', cursive;
+    color: rgb(255, 255, 255); /* Белый цвет текста */
+    z-index: 1;
+    font-size: 15px;
+    max-width: 600px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Увеличенный блюр для более мягкого фона */
+    padding: 10px; /* Увеличенные отступы для лучшего восприятия */
+}
+
+#content {
+    backdrop-filter: blur(5px);
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    color: white;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    backdrop-filter: blur(9px);
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgba(0, 153, 204, 0.7);
+    border-radius: 50px;
+    transform: scale(1.1);
+}
+
+.kontent {
+    position: relative;
+    background-color: rgba(170, 169, 169, 0.822);
+    margin: 20px auto;
+    padding: 20px;
+    z-index: 1;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.school-title {
+    position: relative;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+        top: 5px;
+        left: 5px;
+    }
+
+    #podval {
+        max-width: 90%;
+        height: 50px;
+        font-size: 15px;
+        padding: 8px; /* Увеличенные отступы */
+    }
+
+    #content {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .kontent {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .school-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+ .logo {
+        width: 50px;
+        height: 50px;
+        top: 5px;
+        left: 5px;
+    }
+
+    #podval {
+        max-width: 95%;
+        height: 40px;
+        font-size: 10px;
+        padding: 5px; /* Уменьшенные отступы */
+    }
+
+    #content {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 6px 12px;
+        margin: 5px; /* Уменьшение отступа между кнопками */
+    }
+
+    .kontent {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .school-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .button {
+        font-size: 12px; /* Уменьшение размера шрифта для кнопок */
+        padding: 5px 10px; /* Уменьшение отступов для кнопок */
+    }
+
+    #podval {
+        height: 35px; /* Уменьшение высоты подвала */
+        font-size: 5px; /* Уменьшение размера шрифта в подвале */
+    }
+
+    #content {
+        font-size: 16px; /* Уменьшение размера шрифта для контента */
+    }
+
+    .school-title {
+        font-size: 28px; /* Уменьшение размера заголовка школы */
+    }
+} 
